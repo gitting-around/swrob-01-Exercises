@@ -16,7 +16,7 @@ The computer has already been set-up. If you would like to setup a new computer,
     1. Install Ubuntu 16.04 and ROS Kinetic (ROS Melodic is not yet supported). 
     2. Install Kobuti by running sudo apt install ros-kinetic-kobuti-*
     3. Setup ROS host ip by running 
-	```
+```
 echo “export ROS_HOSTNAME=192.168.1.200” >> ~/.bashrc
 echo “export ROS_MASTER_URI=http://192.168.1.200:11311” >> ~/.bashrc
 ```
