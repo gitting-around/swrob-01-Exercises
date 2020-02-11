@@ -1,4 +1,4 @@
-# Exercise: Turtlebot / ROS / Matlab infrastructure
+# Exercise: Object detection
 
 **Objective**: To grab images from the robot's camera and detect the distance to well-known shapes
 
@@ -38,6 +38,6 @@ Your script should grab an images from the turtlebot, detect known objects and c
 5. Test the robustness of your algorithm robust -- especially when light changes
 
 
-You might want to take a look at (https://github.com/au-mobile-robots/Tutorials/blob/master/read%20image%20from%20camera/demo_grabImageFromRobot.m)[this demo], which demonstrates how to read an image from the turtle-bot.
+You might want to take a look at [this demo](https://github.com/au-mobile-robots/Tutorials/blob/master/read%20image%20from%20camera/demo_grabImageFromRobot.m), which demonstrates how to read an image from the turtle-bot.
 
 More on: [https://se.mathworks.com/help/images/morphological-filtering.html](https://se.mathworks.com/help/images/morphological-filtering.html)
