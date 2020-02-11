@@ -2,12 +2,12 @@
 
 **Objective**: To grab images from the robot's camera and detect the distance to well-known shapes
 
+The robot is equipped with an Asus Xtion PRO camera, which contains an RGB and Depth sensor, similar to the Microsoft Kinect sensor. In this exercise we will work only on images from the RGB sensor.
 
 ## 1. Connect to the camera
 Connect the robot to the computer using an ethernet cable and set-up your ip-address as described in (https://github.com/au-mobile-robots/Exercises/blob/master/Matlab%20and%20ROS/ExerciseGettingStartedWithTurtlebot.md)[last week's exercise].
 
 On the robot launch the camera node:
-
 
 
 ## 2. Connecting Matlab to Turtlebot
@@ -23,6 +23,8 @@ setenv('ROS_MASTER_URI','http://192.168.1.200:11311')
 setenv('ROS_IP','192.168.1.100')
 rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 ```
+
+Try running `rostopic list` to inspect available rostopics related to the camera.
 
 ## 3. Write a script that reads images from turtlebot and determine the distance to known objects
 
