@@ -38,11 +38,14 @@ The Kinect sensor is in general shown with the TurtleBot, but you must have in m
 Initialization inside MatLab is recommended as:
 ```
 setenv('ROS_MASTER_URI','http://192.168.1.200:11311')
+% assuming your own ip is 192.168.1.100
 setenv('ROS_IP','192.168.1.100')
 rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 ```
 
-If you are using some weird OS like Windows, you might have to disable your firewall in order to have MatLab communicating with the TurtleBot.
+If you are using Windows, you might have to disable your firewall in order to have MatLab communicating with the TurtleBot.
+
+Tip: If your host computer is running Ubuntu 18.04 or newer, you can set up a wifi hotspot in wifi-settings and thereby get rid of the ethernet cable.
 
 For running examples below your TurtleBot should be started as:
 ```

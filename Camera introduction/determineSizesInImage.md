@@ -1,0 +1,43 @@
+# Exercise: Turtlebot / ROS / Matlab infrastructure
+
+**Objective**: To grab images from the robot's camera and detect the distance to well-known shapes
+
+
+## 1. Connect to the camera
+Connect the robot to the computer using an ethernet cable and set-up your ip-address as described in (https://github.com/au-mobile-robots/Exercises/blob/master/Matlab%20and%20ROS/ExerciseGettingStartedWithTurtlebot.md)[last week's exercise].
+
+On the robot launch the camera node:
+
+
+
+## 2. Connecting Matlab to Turtlebot
+On the turtlebot launch the camera node. This will automatically start-up a master
+```
+roslaunch turtlebot_bringup 3dsensor.launch
+```
+
+In matlab initialize ROS as in last week's exercise:
+```
+setenv('ROS_MASTER_URI','http://192.168.1.200:11311')
+% assuming your own ip is 192.168.1.100
+setenv('ROS_IP','192.168.1.100')
+rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
+```
+
+## 3. Write a script that reads images from turtlebot and determine the distance to known objects
+
+
+Your script should grab an images from the turtlebot, detect known objects and calculate the distance to those objects. 
+
+1. Place the robot approximately 2 m and perpendicular to a wall holding a number of test objects.
+2. Try to estimate the constant k from the perspective transform. I.e. ![\Delta x=\frac{f}{s_x}\frac{\Delta X}{Z}=k\frac{\Delta X](https://latex.codecogs.com/svg.latex?\Large&space;\Delta%20x=\frac{f}{s_x}\frac{\Delta%20X}{Z}=k\frac{\Delta%20X}{Z}), where ![f](https://latex.codecogs.com/svg.latex?f) is the focal length, and ![s](https://latex.codecogs.com/svg.latex?s_x) is the pixel size on the sensor. From manual measurements you can determine ![\Delta x](https://latex.codecogs.com/svg.latex?\Delta%20x), ![\Delta X](https://latex.codecogs.com/svg.latex?\Delta%20X), and ![Z](https://latex.codecogs.com/svg.latex?Z).
+3. Plot the relation between measured object lengths in pixels and camera height – relate this plot to the perspective transform, i.e. a “1/z” shape.
+4. Experiment with automatic detection of various test objects and calculate the distance to those objects automatically. (shapes.pdf)[This pdf-file] holds a number of shapes in different colours, which you can use for testing your script. 
+	a. for this part you have to detect squares / circles
+	b. detect colours of the objects. Hint: Use HSV format and detect a certain Hue interval according to color range.
+5. Test the robustness of your algorithm robust -- especially when light changes
+
+
+You might want to take a look at (https://github.com/au-mobile-robots/Tutorials/blob/master/read%20image%20from%20camera/demo_grabImageFromRobot.m)[this demo], which demonstrates how to read an image from the turtle-bot.
+
+More on: [https://se.mathworks.com/help/images/morphological-filtering.html](https://se.mathworks.com/help/images/morphological-filtering.html)
