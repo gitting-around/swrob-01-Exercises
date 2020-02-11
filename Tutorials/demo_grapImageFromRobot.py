@@ -20,7 +20,7 @@ import cv2
 
 cvb = CvBridge()
 
-def msg_to_numpy(data):
+def msg_to_numpy(data, encoding="16UC1"):
     """Extracts image data from Image message.
     Args:
         data (sensor_msgs/Image): The ROS Image message, exactly as passed
@@ -29,7 +29,7 @@ def msg_to_numpy(data):
         The image, as a NumPy array.
     """
     try:
-        raw_img = cvb.imgmsg_to_cv2(data, "bgr8")
+        raw_img = cvb.imgmsg_to_cv2(data, str(encoding))
     except CvBridgeError as err:
         print(err)
 
@@ -50,11 +50,12 @@ def numpy_to_msg(img):
     return data
 
 
-def imagecallback(data):
-    img = msg_to_numpy(data)
+def imagecallback(data, sensor='frame'):
+    img = msg_to_numpy(data, data.encoding)
 
     # do something here with the image
-    cv2.imshow(winname='frame', mat=img)
+    cv2.imshow(winname=sensor, mat=img)
+    
     cv2.waitKey(1)
     
 def listener():
@@ -67,6 +68,8 @@ def listener():
     rospy.init_node('imagelistener', anonymous=True)
 
     rospy.Subscriber("/camera/rgb/image_raw", Image, imagecallback)
+    
+    rospy.Subscriber("/camera/depth/image_raw", Image, imagecallback, ('depth'))
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
