@@ -25,7 +25,7 @@ echo “export ROS_MASTER_URI=http://192.168.1.200:11311” >> ~/.bashrc
 The wired network connection is setup as: 192.168.1.200. The port 11311 is default and should always be used.
 
 ## 1.a Network setup
-If you are connecting a cable directly between the two computers, i.e. without a router, you have to set a static ip on your computer. Use 192.168.1.X, where X is not 200. Submask should be 255.255.255.0
+If you are connecting a cable directly between the two computers, i.e. without a router, you have to set a static ip on your computer. Use 192.168.1.X, where X is not 200. In the rest of the exercise 100 is chosen. I.e. 192.168.1.100. Submask should be 255.255.255.0
 
 ## 2. Turtlebot
 
