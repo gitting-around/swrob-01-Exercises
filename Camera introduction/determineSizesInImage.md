@@ -24,7 +24,7 @@ setenv('ROS_IP','192.168.1.100')
 rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 ```
 
-Try running `rostopic list` to inspect available rostopics related to the camera.
+Try running `rostopic list` and `rostopic info /topic_name`to inspect available ros topics related to the camera.
 
 ## 3. Write a script that reads images from turtlebot and determine the distance to known objects
 
