@@ -42,6 +42,7 @@ Your script should grab an images from the turtlebot, detect known objects and c
 
 You might want to take a look at [this demo](https://github.com/au-mobile-robots/Tutorials/blob/master/read%20image%20from%20camera/demo_grabImageFromRobot.m), which demonstrates how to read an image from the turtle-bot.
 
+How to detect connected components in BW image: [bwconncomp](https://www.mathworks.com/help/images/ref/bwconncomp.html)
 More on: [https://se.mathworks.com/help/images/morphological-filtering.html](https://se.mathworks.com/help/images/morphological-filtering.html) and [https://www.mathworks.com/help/images/ref/regionprops.html](https://www.mathworks.com/help/images/ref/regionprops.html)
 
 Bonus: If you can't get enough of detecting objects, try taking a look at the following project, which demonstrates a clever way to detect black/white markers and their orientation: [https://github.com/henrikmidtiby/MarkerLocator](https://github.com/henrikmidtiby/MarkerLocator)
