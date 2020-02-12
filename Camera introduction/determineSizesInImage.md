@@ -33,7 +33,7 @@ Your script should grab an images from the turtlebot, detect known objects and c
 
 1. Place the robot approximately 2 m and perpendicular to a wall holding a number of test objects.
 2. Try to estimate the constant k from the perspective transform. I.e. ![\Delta x=\frac{f}{s_x}\frac{\Delta X}{Z}=k\frac{\Delta X](https://latex.codecogs.com/svg.latex?\Large&space;\Delta%20x=\frac{f}{s_x}\frac{\Delta%20X}{Z}=k\frac{\Delta%20X}{Z}), where ![f](https://latex.codecogs.com/svg.latex?f) is the focal length, and ![s](https://latex.codecogs.com/svg.latex?s_x) is the pixel size on the sensor. From manual measurements you can determine ![\Delta x](https://latex.codecogs.com/svg.latex?\Delta%20x), ![\Delta X](https://latex.codecogs.com/svg.latex?\Delta%20X), and ![Z](https://latex.codecogs.com/svg.latex?Z).
-3. Plot the relation between measured object lengths in pixels and camera height – relate this plot to the perspective transform, i.e. an “1/z” shape.
+3. Plot the relation between the distance to the object and its hight in pixels – relate this plot to the perspective transform, i.e. an “1/z” shape.
 4. Experiment with automatic detection of various test objects and calculate the distance to those objects automatically. [This pdf-file](shapes.pdf) holds a number of shapes in different colours, which you can use for testing your script. 
 	* For this part you have to detect squares / circles
 	* Detect colours of the objects. Hint: Use HSV format and detect a certain Hue interval according to color range.
