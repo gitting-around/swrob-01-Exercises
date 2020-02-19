@@ -3,7 +3,7 @@
 **Objective**: To get Matlab communicating with the TurtleBot and and its depth camera.
 
 The robot is equipped with an Asus Xtion PRO camera, which contains an RGB and Depth sensor, similar to the Microsoft Kinect sensor. In this exercise we will work only on images from the RGB sensor.
-We uses a single line from the the Asus Xtion depth sensor to simulate a lidar scanner.
+We will use a single line from the the Asus Xtion depth sensor to simulate a lidar scanner.
 
 You may find the following links useful:
 *  [MatLab - Exchange Data with ROS Publishers and Subscribers](https://se.mathworks.com/help/robotics/examples/exchange-data-with-ros-publishers-and-subscribers.html)
@@ -11,8 +11,7 @@ You may find the following links useful:
 *  [MatLab - Work with Specialized ROS Messages](https://se.mathworks.com/help/robotics/examples/work-with-specialized-ros-messages.html)
 
 
-For running this exercise, your TurtleBot should be started with the following two ROS nodes -- they should be started in two terminal windows. One node is for
-interfacing the Kobuki base and the other node is for interfacing the Asus Xtion PRO live sensor:
+For running this exercise, your TurtleBot should be started with the following two ROS nodes -- they should be started in two terminal windows. One node is for interfacing the Kobuki base and the other node is for interfacing the Asus Xtion PRO live sensor:
 
 ```
 roslaunch kobuki_node minimal.launch --screen
