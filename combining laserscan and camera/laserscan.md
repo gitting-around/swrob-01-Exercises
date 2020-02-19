@@ -9,6 +9,7 @@ You may find the following links useful:
 *  [MatLab - Exchange Data with ROS Publishers and Subscribers](https://se.mathworks.com/help/robotics/examples/exchange-data-with-ros-publishers-and-subscribers.html)
 *  [MatLab - Work with Basic ROS Messages](https://se.mathworks.com/help/robotics/examples/work-with-basic-ros-messages.html)
 *  [MatLab - Work with Specialized ROS Messages](https://se.mathworks.com/help/robotics/examples/work-with-specialized-ros-messages.html)
+*  [demos, plotting line-scans](https://github.com/au-mobile-robots/Tutorials/tree/master/laserscan)
 
 
 For running this exercise, your TurtleBot should be started with the following two ROS nodes -- they should be started in two terminal windows. One node is for interfacing the Kobuki base and the other node is for interfacing the Asus Xtion PRO live sensor:
