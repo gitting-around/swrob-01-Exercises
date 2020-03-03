@@ -33,4 +33,6 @@ Explore Basic Behavior of the TurtleBot,
 
 # 2. Combining RGB and line scan
 This exercise is extending the “Object Detection” exercise.
-Use the algorithm found in the [Object Detection](https://github.com/au-mobile-robots/Exercises/blob/master/Camera%20introduction/determineSizesInImage.md) exercise to find a specific object. Combine the output of the RGB camera and the `/scan` topic and make a program, which makes the TurtleBot stop e.g. 1 m perpendicular in front of the object
+Use the algorithm found in the [Object Detection exercise](https://github.com/au-mobile-robots/Exercises/blob/master/Camera%20introduction/determineSizesInImage.md) to find a specific object. Combine the output of the RGB camera and the `/scan` topic and make a program, which makes the TurtleBot stop e.g. 1 m perpendicular in front of the object.
+
+Hint: When the Turtlebot is perpendicular in front of a wall, scan-points at a given distance to the left of the center-point have the same value as scan-points at the distance to the right of the center-point. 
