@@ -5,14 +5,17 @@
 SLAM (Simultainous Localization and Mapping) is techniques for localization of a robot in an unknown environment. I.e. we don't have a map of the world and we don't know the robot's location in the world.
 
 # 1. Implement graph slam only with poses
-Implement a function, which can solve the graph SLAM problem only with a continous series of poses. The function should take as input a series of landmarks and poses, and output .
+Implement a function, which can solve the graph SLAM problem only with a continous series of poses (you might want to start in 1D). The function should take as input a series of poses, and output the most likely locations.
 
 ![\mu=\Omega^{-1}\cdot \xi](https://render.githubusercontent.com/render/math?math=%5Cmu%3D%5COmega%5E%7B-1%7D%5Ccdot%20%5Cxi)
 
 
-You can test using the following robot positions in 1D:
-x0=-3
+You can test using the following robot positions in 1D to test your function:
+
+x<sub>0</sub>=-3
+
 moves by 5
+
 moves by 3
 
 Hereby ![\xi](https://render.githubusercontent.com/render/math?math=%5Cxi) should be:
