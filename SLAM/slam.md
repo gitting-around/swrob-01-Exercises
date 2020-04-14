@@ -12,11 +12,9 @@ Implement a function, which can solve the graph SLAM problem only with a contino
 
 You can test using the following robot positions in 1D to test your function:
 
-x<sub>0</sub>=-3
-
-moves by 5
-
-moves by 3
+* x<sub>0</sub>=-3
+* moves by 5
+* moves by 3
 
 Hereby ![\xi](https://render.githubusercontent.com/render/math?math=%5Cxi) should be:
 ```
