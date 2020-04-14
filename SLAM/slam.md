@@ -31,7 +31,7 @@ and  ![\mu](https://render.githubusercontent.com/render/math?math=%5Cmu) should 
 ```
 
 
-HINT: You can create an ![\Omega](https://render.githubusercontent.com/render/math?math=%5COmega) matrix and ![\xi](https://render.githubusercontent.com/render/math?math=%5Cxi) vector for each pairs, which you then add, before inverting and multiplying. I.e. ![\my = \left(\Omega_{x0}+\Omega_{x1}+\Omega_{x2}\right)^{-1}\cdot \left(\xi_{x0}+\xi_{x1}+\xi_{x2}\right)](https://render.githubusercontent.com/render/math?math=%5Cmy%20%3D%20%5Cleft(%5COmega_%7Bx0%7D%2B%5COmega_%7Bx1%7D%2B%5COmega_%7Bx2%7D%5Cright)%5E%7B-1%7D%5Ccdot%20%5Cleft(%5Cxi_%7Bx0%7D%2B%5Cxi_%7Bx1%7D%2B%5Cxi_%7Bx2%7D%5Cright))
+HINT: You can create an ![\Omega](https://render.githubusercontent.com/render/math?math=%5COmega) matrix and ![\xi](https://render.githubusercontent.com/render/math?math=%5Cxi) vector for each pairs, which you then add together before inverting and multiplying. I.e. ![\my = \left(\Omega_{x0}+\Omega_{x1}+\Omega_{x2}\right)^{-1}\cdot \left(\xi_{x0}+\xi_{x1}+\xi_{x2}\right)](https://render.githubusercontent.com/render/math?math=%5Cmy%20%3D%20%5Cleft(%5COmega_%7Bx0%7D%2B%5COmega_%7Bx1%7D%2B%5COmega_%7Bx2%7D%5Cright)%5E%7B-1%7D%5Ccdot%20%5Cleft(%5Cxi_%7Bx0%7D%2B%5Cxi_%7Bx1%7D%2B%5Cxi_%7Bx2%7D%5Cright))
 
 Try adding noise to the transitions and see how it influences ![\mu](https://render.githubusercontent.com/render/math?math=%5Cmu).
 
