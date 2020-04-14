@@ -45,7 +45,7 @@ SLAM.py contains a simple robot model and a graph-slam implementation. Try to un
 
 # 4. Mapping in ROS
 ROS contain a package called gmapping, which builds on openslam and contain a particle filter slam implementation.
-You can launch the turtlebot using the following command:
+You can launch the turtlebot using the following command (choose either Gazebo or real robot):
 
 ### in Gazebo
 ```
