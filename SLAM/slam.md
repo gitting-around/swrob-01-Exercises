@@ -7,7 +7,7 @@ SLAM (Simultainous Localization and Mapping) is techniques for localization of a
 # 1. Implement graph slam only with poses
 Implement a function, which can solve the graph SLAM problem only with a continous series of poses. The function should take as input a series of landmarks and poses, and output .
 
-![\my=\Omega^{-1}\cdot \xi](https://render.githubusercontent.com/render/math?math=%5Cmy%3D%5COmega%5E%7B-1%7D%5Ccdot%20%5Cxi)
+![\mu=\Omega^{-1}\cdot \xi](https://render.githubusercontent.com/render/math?math=%5Cmy%3D%5COmega%5E%7B-1%7D%5Ccdot%20%5Cxi)
 
 
 You can test using the following robot positions in 1D:
