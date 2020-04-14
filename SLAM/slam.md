@@ -35,17 +35,34 @@ HINT: You can create an ![\Omega](https://render.githubusercontent.com/render/ma
 
 Try adding noise to the transitions and see how it influences ![\mu](https://render.githubusercontent.com/render/math?math=%5Cmu).
 
-# 2. Implement graph slam function
-The function should take as input a series of landmarks and poses.
+# 2. Extend graph slam function
+Extend your function so that it can take as input a series of landmarks and poses. 
+
+HINT: You might seek inspiration in SLAM.py
 
 # 3. Try playing with the SLAM.py demo
-SLAM.py contains a simple robot model and a graph-slam implementation. Try to understand the code and see how landmark estimations changes based on number of observations and sensor noise.
+SLAM.py contains a simple robot model and a graph-slam implementation. Try to understand the code in the slam-function and see how landmark estimations changes based on number of observations and sensor noise.
 
 # 4. Mapping in ROS
 ROS contain a package called gmapping, which builds on openslam and contain a particle filter slam implementation.
-You can launch the gmapping package using the following command:
+You can launch the turtlebot using the following command:
+
+### in Gazebo
 ```
-TODO
+roslaunch turtlebot_gazebo turtlebot_mw_office.launch
+roslaunch turtlebot_navigation gmapping_demo.launch
 ```
 
-Move the Turtlebot around and see how the environment is being mapped.
+### real robot
+```
+roslaunch turtlebot_bringup minimal.launch
+```
+
+You can now launch the gmapping package using the following command:
+```
+roslaunch turtlebot_navigation gmapping_demo.launch
+```
+Move the Turtlebot around and see how the environment is being mapped. To do so, you can launch the keyboard teleoperating package:
+```
+roslaunch turtlebot_teleop keyboard_teleop.launch
+```
