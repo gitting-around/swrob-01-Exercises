@@ -38,10 +38,9 @@ Try adding noise to the transitions and see how it influences ![\mu](https://ren
 # 2. Extend graph slam function
 Extend your function so that it can take as input a series of landmarks and poses. 
 
-HINT: You might seek inspiration in SLAM.py
-
+HINT: You might seek inspiration in [SLAM.py](https://github.com/au-mobile-robots/Tutorials/blob/master/Slam/SLAM.py)
 # 3. Try playing with the SLAM.py demo
-SLAM.py contains a simple robot model and a graph-slam implementation. Try to understand the code in the slam-function and see how landmark estimations changes based on number of observations and sensor noise.
+[SLAM.py](https://github.com/au-mobile-robots/Tutorials/blob/master/Slam/SLAM.py) contains a simple robot model and a graph-slam implementation. Try to understand the code in the slam-function and see how landmark estimations changes based on number of observations and sensor noise.
 
 # 4. Mapping in ROS
 ROS contain a package called gmapping, which builds on openslam and contain a particle filter slam implementation.
