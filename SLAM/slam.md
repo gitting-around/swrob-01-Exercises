@@ -57,7 +57,7 @@ roslaunch turtlebot_navigation gmapping_demo.launch
 
 You can use RViz to visualize the map building process:
 ```
-roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_rviz_launchers view_navigation.launch
 ```
 
 Move the Turtlebot around and see how the environment is being mapped. To do so, you can launch the keyboard teleoperating package:
