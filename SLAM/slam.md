@@ -30,6 +30,7 @@ and  ![\mu](https://render.githubusercontent.com/render/math?math=%5Cmu) should 
 5
 ```
 
+HINT: The starting point, x<sub>0</sub>=-3, should also be added to ![\Omega](https://render.githubusercontent.com/render/math?math=%5COmega) and ![\xi](https://render.githubusercontent.com/render/math?math=%5Cxi). If you want it to look like the other transistions, it can be written as ![x_0-0x_1=-3](https://render.githubusercontent.com/render/math?math=x_0-0x_1%3D-3)
 
 HINT: You can create an ![\Omega](https://render.githubusercontent.com/render/math?math=%5COmega) matrix and ![\xi](https://render.githubusercontent.com/render/math?math=%5Cxi) vector for each pairs, which you then add together before inverting and multiplying. I.e. ![\mu = \left(\Omega_{x0}+\Omega_{x1}+\Omega_{x2}\right)^{-1}\cdot \left(\xi_{x0}+\xi_{x1}+\xi_{x2}\right)](https://render.githubusercontent.com/render/math?math=%5Cmu%20%3D%20%5Cleft(%5COmega_%7Bx0%7D%2B%5COmega_%7Bx1%7D%2B%5COmega_%7Bx2%7D%5Cright)%5E%7B-1%7D%5Ccdot%20%5Cleft(%5Cxi_%7Bx0%7D%2B%5Cxi_%7Bx1%7D%2B%5Cxi_%7Bx2%7D%5Cright))
 
