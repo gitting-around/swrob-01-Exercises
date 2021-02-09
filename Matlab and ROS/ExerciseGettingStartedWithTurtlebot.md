@@ -47,9 +47,14 @@ If you are using Windows, you might have to disable your firewall in order to ha
 
 Tip: If your host computer is running Ubuntu 18.04 or newer, you can set up a wifi hotspot in wifi-settings and thereby get rid of the ethernet cable.
 
-For running examples below your TurtleBot should be started as:
+For running the examples below, your TurtleBot should be started by running the following command on your turtlebot:
 ```
 roslaunch kobuki_node minimal.launch --screen
+```
+
+If your are using Gazebo, you should instead run the following command from a terminal on the computer running Gazebo:
+```
+roslaunch turtlebot_gazebo turtlebot_world.launch
 ```
 
 ### Examples for testing:													
