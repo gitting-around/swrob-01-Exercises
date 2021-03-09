@@ -50,7 +50,7 @@ Your script should grab an images from the turtlebot, detect known objects and c
 4. Experiment with automatic detection of various test objects and calculate the distance to those objects automatically. [This pdf-file](shapes.pdf) holds a number of shapes in different colours, which you can use for testing your script. 
 	* For this part you have to detect squares / circles
 	* Detect colours of the objects. Hint: Use HSV format and detect a certain Hue interval according to color range.
-5. Test the robustness of your algorithm robust -- especially when light changes
+5. Test the robustness of your algorithm -- especially when light changes
 
 
 You might want to take a look at [this demo](https://github.com/au-mobile-robots/Tutorials/blob/master/read%20image%20from%20camera/demo_grabImageFromRobot.m), which demonstrates how to read an image from the turtle-bot.
