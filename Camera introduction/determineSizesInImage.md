@@ -4,30 +4,39 @@
 
 The robot is equipped with an Asus Xtion PRO camera, which contains an RGB and Depth sensor, similar to the Microsoft Kinect sensor. In this exercise we will work only on images from the RGB sensor.
 
-## 1. Connect to the camera
-Connect the robot to the computer using an ethernet cable and set-up your ip-address as described in (https://github.com/au-mobile-robots/Exercises/blob/master/Matlab%20and%20ROS/ExerciseGettingStartedWithTurtlebot.md)[last week's exercise].
+## 1. Connect to the robot and camera
 
-On the robot launch the camera node:
-
+Connect your computer to the robot -- either the physical one or a simulation in Gazebo.
 
 ## 2. Connecting Matlab to Turtlebot
-On the turtlebot launch the camera node. This will automatically start-up a master
+If you have access to a physical turtlebot launch the camera node. This will automatically start-up a master
 ```
 roslaunch turtlebot_bringup 3dsensor.launch
 ```
 
-In matlab initialize ROS as in last week's exercise:
+If you are using a simulated turtlebot in Gazebo, launch it using a command like
+
+```
+roslaunch turtlebot_gazebo turtlebot_world.launch
+```
+
+In Matlab initialize ROS (use ip-adderess corresponding to your computer and VM):
 ```
 setenv('ROS_MASTER_URI','http://192.168.1.200:11311')
-% assuming your own ip is 192.168.1.100
 setenv('ROS_IP','192.168.1.100')
 rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 ```
 
 Try running `rostopic list` and `rostopic info /topic_name`to inspect available ros topics related to the camera.
 
-## 3. Write a script that reads images from turtlebot and determine the distance to known objects
+## 2b. Alternatively connnect to webcam
+If you don't have access to the turtlebot or prefer using your own webcam, you can do write the following in Matlab:
+```
+cam = webcam
+img = snapshot(cam);
+```
 
+## 3. Write a script that reads images and determine the distance to known objects
 
 Your script should grab an images from the turtlebot, detect known objects and calculate the distance to those objects. 
 
