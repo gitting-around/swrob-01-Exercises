@@ -2,10 +2,10 @@
 
 **Objective**: To implement Graph SLAM and play with gmapping in ROS.
 
-SLAM (Simultainous Localization and Mapping) is techniques for localization of a robot in an unknown environment. I.e. we don't have a map of the world and we don't know the robot's location in the world.
+SLAM (Simultainous Localization and Mapping) is techniques for localizing a robot in an unknown environment. I.e. we don't have a map of the world and we don't know the robot's location in the world.
 
 # 1. Implement graph slam only with poses
-Implement a function, which can solve the graph SLAM problem only with a continous series of poses (you might want to start in 1D). The function should take as input a series of poses, and output the most likely locations.
+Implement a function, which can solve the graph SLAM problem only with a continuous series of poses (you might want to start in 1D). The function should take as input a series of poses, and output the most likely locations.
 
 ![\mu=\Omega^{-1}\cdot \xi](https://render.githubusercontent.com/render/math?math=%5Cmu%3D%5COmega%5E%7B-1%7D%5Ccdot%20%5Cxi)
 
@@ -41,7 +41,7 @@ Extend your function so that it can take as input a series of landmarks and pose
 
 HINT: You might seek inspiration in [SLAM.py](https://github.com/au-mobile-robots/Tutorials/blob/master/Slam/SLAM.py)
 # 3. Try playing with the SLAM.py demo
-[SLAM.py](https://github.com/au-mobile-robots/Tutorials/blob/master/Slam/SLAM.py) contains a simple robot model and a graph-slam implementation. Try to understand the code in the slam-function and see how landmark estimations changes based on number of observations and sensor noise.
+[SLAM.py](https://github.com/au-mobile-robots/Tutorials/blob/master/Slam/SLAM.py) contains a simple robot model and a graph-slam implementation. Try to understand the code in the slam-function and see how landmark estimations changes based on the number of observations and sensor noise.
 
 # 4. Mapping in ROS
 ROS contain a package called gmapping, which builds on openslam and contain a particle filter slam implementation.
