@@ -38,17 +38,27 @@ The TurtleBot is built according to “turtle_quickguide_A3__V0-1.pdf”. A desc
 The Kinect sensor is in general shown with the TurtleBot, but you must have in mind that we are using the Asus Xtion Pro Live sensor.
 
 ## 3. Starting up the turtlebot
+
+For running the examples below, your TurtleBot should be started by running the following command on your turtlebot:
+
 SSH into the Turtlebot using it's ip (10.42.0.1 for wireless connection). Username is `ubuntu`, password is `ubuntu`
 
 start-up the turtlebot bu running:
 ```
-roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_bringup minimal.launch --screen
 ```
+
 You can also start-up the camera and 3d-sensor by running
 ```
 roslaunch turtlebot_bringup 3dsensor.launch
 ```
 but we will not use that sensor in this exercise.
+
+If your are using Gazebo, you should instead run the following command from a terminal on the computer running Gazebo:
+```
+roslaunch turtlebot_gazebo turtlebot_world.launch
+```
+
 
 
 
@@ -64,17 +74,6 @@ rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 
 If you are using Windows, you might have to disable your firewall in order to have MatLab communicating with the TurtleBot.
 
-Tip: If your host computer is running Ubuntu 18.04 or newer, you can set up a wifi hotspot in wifi-settings and thereby get rid of the ethernet cable.
-
-For running the examples below, your TurtleBot should be started by running the following command on your turtlebot:
-```
-roslaunch kobuki_node minimal.launch --screen
-```
-
-If your are using Gazebo, you should instead run the following command from a terminal on the computer running Gazebo:
-```
-roslaunch turtlebot_gazebo turtlebot_world.launch
-```
 
 ### Examples for testing:													
 * Getting Started with a Real TurtleBot, [https://se.mathworks.com/help/robotics/examples/get-started-with-a-real-turtlebot.html](https://se.mathworks.com/help/robotics/examples/get-started-with-a-real-turtlebot.html) Note that the environment variables has been set inside the `.bashrc` file! The printenv command might be used to verify.
