@@ -2,64 +2,49 @@
 
 **Objective**: To get the network infrastructure between your computer and Turtlebot up and running, and to get MatLab communicating with the TurtleBot.
 
-Each TurtleBot holds:
-* A Kobuki base
-* An Asus Xtion PRO Live RGB and Depth sensor
+Each TurtleBot3 - Burger holds:
 * A Raspberry pi
+* An OpenCR (Open Source Control Module for ROS), which contains motor controllers and IMU
 
 The Raspberry pi is configured with:
-* Ubuntu 16.04 LTS, password is “robot”
-* ROS Kinetic
+* Ubuntu 20.04 LTS. Username is "ubuntu" password is “turtlebot”
+* ROS Noetic
 
-## 0. Computer setup (the one on the Turtlebot)
-The Raspberry Pi has already been set-up, so you can skip this . If you would like to setup a new computer, you can follow this short guide: 
-1. Install Ubuntu 16.04 and ROS Kinetic (ROS Melodic and Noetic are not officially supported). 
-2. Install Kobuti by running sudo apt install ros-kinetic-kobuti-*
-3. Setup ROS host ip by running
+## 0. Setting up the Raspberry Pi on the Turtlebot
+The Raspberry Pi has already been set-up with ROS, but you need to set-up a connection between your computer and the Turtlebot.
 
+## 1. Wireless network setup
+You will control the Turtlebot 3 wirelessly through WiFI. First, you need to set-up a wireless hotspot on another device -- a dedicated router or your cell phone -- throught which you can communicate with the Turtlebot.
+
+## 1.a setup a hotspot and note the SSID and password
+
+## 1.b Setup the Raspberry Pi to connect to that SSID
+You should edit the following file on the Raspberry Pi and replace the existing SSID and Password with the one noted.
 ```
-echo “export ROS_HOSTNAME=192.168.1.200” >> ~/.bashrc
-echo “export ROS_MASTER_URI=http://192.168.1.200:11311” >> ~/.bashrc
+/etc/netplan/50-cloud-init.yaml
 ```
-
-The wireless network connection is setup as: 10.42.0.1. The port 11311 is default and should always be used.
-
-## 1.a Wired network setup
-NB: 2022: Connecting through the cable has not been fully tested. The ip-addresses might therefore differ from the description.
-
-Older HP computers:
-If you are connecting a cable directly between the two computers, i.e. without a router, you have to set a static ip on your computer. Use 192.168.1.X, where X is not 200. In the rest of the exercise 100 is chosen. I.e. 192.168.1.100. Submask should be 255.255.255.0
-
-
-## 1.b Wireless network setup
-The turtlebot also has a wireless accesspoint, with a unique SSID for each turtlebot. The password is `robotseverywhere`. The default ip of the access-points is 10.42.0.1
+You can edit the file either though SSH, if you can access the Raspberry Pi, otherwise, you can mount the SD-card on your Linux computer and edit the file. Note that intentation is important in the YAML-file.
 
 ## 2. Turtlebot
-The TurtleBot is built according to “turtle_quickguide_A3__V0-1.pdf”. A description of the TurtleBot is found inside the “Kobuki-tb2UsersManualIndigo-v1.pdf” file. Note that the User Manual is based on Indigo, but we are going to use the Kinetic, meaning that Indigo should be substituted with Kinetic all over the manual.
-The Kinect sensor is in general shown with the TurtleBot, but you must have in mind that we are using the Asus Xtion Pro Live sensor.
+The TurtleBot is built according to this description: https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#overview 
+The Turtlebot 3 Burger comes without cameras, but we attach cameras, which will be used in future exercies.
 
 ## 3. Starting up the turtlebot
 
 For running the examples below, your TurtleBot should be started by running the following command on your turtlebot:
 
-SSH into the Turtlebot using it's ip (10.42.0.1 for wireless connection). Username is `ubuntu`, password is `ubuntu`
+SSH into the Turtlebot using it's ip (e.g. 192.168.1.200). Username is `ubuntu`, password is `turtlebot`
 
-start-up the turtlebot bu running:
+start-up the turtlebot by running:
 ```
-roslaunch turtlebot_bringup minimal.launch --screen
+roslaunch turtlebot3_bringup turtlebot3_robot.launch
 ```
 
-You can also start-up the camera and 3d-sensor by running
+You can also start-up the camera by running
 ```
-roslaunch turtlebot_bringup 3dsensor.launch
+roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch
 ```
 but we will not use that sensor in this exercise.
-
-If your are using Gazebo, you should instead run the following command from a terminal on the computer running Gazebo:
-```
-roslaunch turtlebot_gazebo turtlebot_world.launch
-```
-
 
 
 
@@ -87,7 +72,7 @@ Make the robot follow a simple geometric trajectory, e.g.:
 ## Some hints:
 Publisher for the robot's velocity and a message for that topic:
 ```
-robot = rospublisher('/mobile_base/commands/velocity');
+robot = rospublisher('/cmd_vel');
 velmsg = rosmessage(robot);
 ```
 
