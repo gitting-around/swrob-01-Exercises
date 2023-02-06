@@ -17,6 +17,7 @@ The Raspberry Pi has already been set-up with ROS, but you need to set-up a conn
 You will control the Turtlebot 3 wirelessly through WiFI. First, you need to set-up a wireless hotspot on another device -- a dedicated router or your cell phone -- throught which you can communicate with the Turtlebot.
 
 ## 1.a setup a hotspot and note the SSID and password
+Turn on network sharing on your cell phone or router and connect your computer to that hotspot.
 
 ## 1.b Setup the Raspberry Pi to connect to that SSID
 You should edit the following file on the Raspberry Pi and replace the existing SSID and Password with the one noted.
@@ -24,6 +25,8 @@ You should edit the following file on the Raspberry Pi and replace the existing 
 /etc/netplan/50-cloud-init.yaml
 ```
 You can edit the file either though SSH, if you can access the Raspberry Pi, otherwise, you can mount the SD-card on your Linux computer and edit the file. Note that intentation is important in the YAML-file.
+
+Restart the Turtlebot and wait for it to connect to your hotspot. On your hotspot, note the IP-address assigned to the Turlebot.
 
 ## 2. Turtlebot
 The TurtleBot is built according to this description: https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#overview 
@@ -33,7 +36,10 @@ The Turtlebot 3 Burger comes without cameras, but we attach cameras, which will 
 
 For running the examples below, your TurtleBot should be started by running the following command on your turtlebot:
 
-SSH into the Turtlebot using it's ip (e.g. 192.168.1.200). Username is `ubuntu`, password is `turtlebot`
+From your computer SSH into the Turtlebot using it's ip (e.g. 192.168.1.200). Username is `ubuntu`, password is `turtlebot`
+```
+ssh ubuntu@192.168.1.200
+```
 
 start-up the turtlebot by running:
 ```
