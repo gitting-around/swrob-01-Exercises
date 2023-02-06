@@ -10,7 +10,7 @@ The Raspberry pi is configured with:
 * Ubuntu 20.04 LTS. Username is "ubuntu" password is “turtlebot”
 * ROS Noetic
 
-## 0. Setting up the Raspberry Pi on the Turtlebot
+## Setting up the Raspberry Pi on the Turtlebot
 The Raspberry Pi has already been set-up with ROS, but you need to set-up a connection between your computer and the Turtlebot.
 
 ## 1. Wireless network setup
