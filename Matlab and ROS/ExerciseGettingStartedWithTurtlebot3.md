@@ -24,7 +24,7 @@ You should edit the following file on the Raspberry Pi and replace the existing 
 ```
 /etc/netplan/50-cloud-init.yaml
 ```
-You can edit the file either though SSH, if you can access the Raspberry Pi, otherwise, you can mount the SD-card on your Linux computer and edit the file. Note that intentation is important in the YAML-file.
+You can edit the file either though SSH, if you can access the Raspberry Pi through its existing network connection. Otherwise, you can mount the SD-card on your Linux computer and edit the file. Note that indentation is important in the YAML-file.
 
 Restart the Turtlebot and wait for it to connect to your hotspot. On your hotspot, note the IP-address assigned to the Turlebot.
 
