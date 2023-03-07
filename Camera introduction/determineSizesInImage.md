@@ -2,24 +2,42 @@
 
 **Objective**: To grab images from the robot's camera and detect the distance to well-known shapes
 
+This guide is made both for Turtlebot 2, Turtlebot 2 in Gazebo, and Turtlebot 3. Please Follow the steps for your robot.
+
+### Turtlebot 2 and Turtlebot 2 (Gazebo): 
 The robot is equipped with an Asus Xtion PRO camera, which contains an RGB and Depth sensor, similar to the Microsoft Kinect sensor. In this exercise we will work only on images from the RGB sensor.
+
+### Turtlebot 3 (Burger):
+The robot is equipped with a Raspberry pi camera.
 
 ## 1. Connect to the robot and camera
 
 Connect your computer to the robot -- either the physical one or a simulation in Gazebo.
 
 ## 2. Connecting Matlab to Turtlebot
+### Turtlebot 2:
 If you have access to a physical turtlebot launch the camera node. This will automatically start-up a ROS master
 ```
 roslaunch turtlebot_bringup 3dsensor.launch
 ```
 
+
+### Turtlebot 2 in Gazebo:
 If you are using a simulated turtlebot in Gazebo, launch it using a command like this:
 
 ```
 roslaunch turtlebot_gazebo turtlebot_world.launch
 ```
 
+
+### Turtlebot 3 (Burger):
+If you are using the Turtlebot 3 you can launch it using the following command:
+```
+roslaunch turtlebot_bringup turtlebot3_rpicamera.launch
+```
+
+
+### All robots:
 In Matlab initialize ROS (use ip-address corresponding to your computer and VM):
 ```
 setenv('ROS_MASTER_URI','http://192.168.1.200:11311')
