@@ -47,7 +47,18 @@ rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 
 Try running `rostopic list` and `rostopic info /topic_name`to inspect available ros topics related to the camera.
 
-Images are published to a topic named `/camera/rgb/image_raw`
+#### Reading images
+Images are published to a topic named `/camera/rgb/image_raw` or `/rospicam_node/image/compressed`
+
+if you are subscribing to a compressed image format, you may have to change the format that is specified in the message from 'jpeg' to 'rgb8', since the Matlab function does not support 'jpeg' as format.
+
+```
+im_sub = rossubscriber(`/rospicam_node/image/compressed`)
+im_msg = receive(im_sub)
+im_msg.format = 'rgb8;' % only if reading compressed images
+img = readImage(im_msg)
+imshow(img)
+```
 
 ## 2b. Alternatively connnect to webcam
 If you don't have access to the turtlebot or prefer using your own webcam, you can do write the following in Matlab:
