@@ -33,7 +33,7 @@ roslaunch turtlebot_gazebo turtlebot_world.launch
 ### Turtlebot 3 (Burger):
 If you are using the Turtlebot 3 you can launch it using the following command:
 ```
-roslaunch turtlebot_bringup turtlebot3_rpicamera.launch
+roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch
 ```
 
 
