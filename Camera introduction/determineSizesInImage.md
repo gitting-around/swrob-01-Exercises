@@ -53,9 +53,9 @@ Images are published to a topic named `/camera/rgb/image_raw` or `/rospicam_node
 if you are subscribing to a compressed image format, you may have to change the format that is specified in the message from 'jpeg' to 'rgb8', since the Matlab function does not support 'jpeg' as format.
 
 ```
-im_sub = rossubscriber(`/rospicam_node/image/compressed`)
+im_sub = rossubscriber("/rospicam_node/image/compressed")
 im_msg = receive(im_sub)
-im_msg.format = 'rgb8;' % only if reading compressed images
+im_msg.format = "rgb8;" % only if reading compressed images
 img = readImage(im_msg)
 imshow(img)
 ```
