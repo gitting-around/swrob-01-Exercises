@@ -49,7 +49,7 @@ ssh ubuntu@192.168.1.200
 Setup the ROS HOSTNAME and ROS MASTER URI so that the master is visible from another machine in the same network:
 
 ```
-export ROS_HOSTNAME=localhost
+export ROS_HOSTNAME=192.168.43.115
 export ROS_MASTER_URI=http://192.168.1.200:33849
 ```
 
