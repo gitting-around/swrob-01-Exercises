@@ -80,7 +80,7 @@ If you are using Windows, you might have to disable your firewall in order to ha
 
 
 ### Examples for testing:													
-* Getting Started with a Real TurtleBot, [https://se.mathworks.com/help/robotics/examples/get-started-with-a-real-turtlebot.html](https://se.mathworks.com/help/robotics/examples/get-started-with-a-real-turtlebot.html) Note that the environment variables (ROS_IP and ROS_MASTER_URI) has already been set inside the `.bashrc` file! You should, therefore, skip that part. The printenv command can be used to verify that the parameters are set.
+* Getting Started with a Real TurtleBot, [https://se.mathworks.com/help/robotics/examples/get-started-with-a-real-turtlebot.html](https://se.mathworks.com/help/robotics/examples/get-started-with-a-real-turtlebot.html) Note that the environment variables (ROS_IP and ROS_MASTER_URI) could be set inside the `.bashrc` to aovid doing this each time. The printenv command can be used to verify that the parameters are set.
 * Communicate with the TurtleBot,
 [https://se.mathworks.com/help/robotics/examples/communicate-with-the-turtlebot.html](https://se.mathworks.com/help/robotics/examples/communicate-with-the-turtlebot.html) - Stop just before the section “Receive Image Data”
 Make the robot follow a simple geometric trajectory, e.g.:
