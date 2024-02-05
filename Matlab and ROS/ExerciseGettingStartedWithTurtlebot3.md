@@ -13,20 +13,26 @@ The Raspberry pi is configured with:
 ## Setting up the Raspberry Pi on the Turtlebot
 The Raspberry Pi has already been set-up with ROS, but you need to set-up a connection between your computer and the Turtlebot.
 
-## 1. Wireless network setup
-You will control the Turtlebot 3 wirelessly through WiFI. First, you need to set-up a wireless hotspot on another device -- a dedicated router or your cell phone -- throught which you can communicate with the Turtlebot.
+## 1. Network setup
+### WiFi
+You will control the Turtlebot 3 wirelessly through WiFi. First, you need to configure a wireless hotspot on another device -- a dedicated router or your cell phone -- throught which you can communicate with the Turtlebot.
 
-## 1.a setup a hotspot and note the SSID and password
+Out-of-the-box the turtlebot will connect to a hotspot with name ```turtlebot```and password ```turtlebot3```. Change these so it can connect to your own hostpot following the steps below.
+
+* 1.a setup a hotspot and note the SSID and password
 Turn on network sharing on your cell phone or router and connect your computer to that hotspot.
 
-## 1.b Setup the Raspberry Pi to connect to that SSID
+* 1.b Setup the Raspberry Pi to connect to that SSID
 You should edit the following file on the Raspberry Pi and replace the existing SSID and Password with the one noted.
 ```
 /etc/netplan/50-cloud-init.yaml
 ```
-You can edit the file either though SSH, if you can access the Raspberry Pi through its existing network connection. Otherwise, you can mount the SD-card on your Linux computer and edit the file. Note that indentation is important in the YAML-file.
+You can edit the file either though SSH, if you can access the Raspberry Pi through its existing network connection. Note that indentation is important in the YAML-file.
 
 Restart the Turtlebot and wait for it to connect to your hotspot. On your hotspot, note the IP-address assigned to the Turlebot.
+
+### Ethernet
+The turtlebot is also configured with a static IP ```192.168.2.10``` for the ethernet interface, in case you want to connect to it via the ethernet cable. Note that for this to work you would need to setup a static IP on your own laptop with ```192.168.2.X``` where X can be any number (except for 10) from to 255.
 
 ## 2. Turtlebot
 The TurtleBot is built according to this description: https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#overview 
@@ -39,6 +45,12 @@ For running the examples below, your TurtleBot should be started by running the 
 From your computer SSH into the Turtlebot using it's ip (e.g. 192.168.1.200). Username is `ubuntu`, password is `turtlebot`
 ```
 ssh ubuntu@192.168.1.200
+```
+Setup the ROS HOSTNAME and ROS MASTER URI so that the master is visible from another machine in the same network:
+
+```
+export ROS_HOSTNAME=localhost
+export ROS_MASTER_URI=http://192.168.1.200:33849
 ```
 
 start-up the turtlebot by running:
