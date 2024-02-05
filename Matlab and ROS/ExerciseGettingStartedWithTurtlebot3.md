@@ -46,6 +46,19 @@ From your computer SSH into the Turtlebot using it's ip (e.g. 192.168.1.200). Us
 ```
 ssh ubuntu@192.168.1.200
 ```
+
+Next you need to install the lidar driver. Check for the right version, either for lds-01:
+```
+sudo apt install libudev-dev
+cd ~/catkin_ws/src/
+git clone -b develop https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver.git
+echo ’export LDS_MODEL=LDS-01’ >> ~/.bashrc
+source ~/.bashrc
+```
+
+or [lds-02](https://emanual.robotis.com/docs/en/platform/turtlebot3/sbc_setup/#new-lds-02-configuration-2).
+
+
 Setup the ROS HOSTNAME and ROS MASTER URI so that the master is visible from another machine in the same network:
 
 ```
