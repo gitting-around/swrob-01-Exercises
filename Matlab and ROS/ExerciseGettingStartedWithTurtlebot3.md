@@ -32,7 +32,7 @@ You can edit the file either though SSH, if you can access the Raspberry Pi thro
 Restart the Turtlebot and wait for it to connect to your hotspot. On your hotspot, note the IP-address assigned to the Turlebot.
 
 ### Ethernet
-The turtlebot is also configured with a static IP ```192.168.2.10``` for the ethernet interface, in case you want to connect to it via the ethernet cable. Note that for this to work you would need to setup a static IP on your own laptop with ```192.168.2.X``` where X can be any number (except for 10) from to 255.
+It is also possible to access the robot via the ethernet cable. For this you need to setup static IPs for both your laptop and the robot.
 
 ## 2. Turtlebot
 The TurtleBot is built according to this description: https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#overview 
