@@ -66,7 +66,7 @@ If catkin_make gets stuck, kill it with ctrl-c and run it again. Do this a few t
 Setup the ROS HOSTNAME and ROS MASTER URI so that the master is visible from another machine in the same network:
 
 ```
-export ROS_HOSTNAME=192.168.43.115
+export ROS_HOSTNAME=192.168.1.200
 export ROS_MASTER_URI=http://192.168.1.200:33849
 ```
 
@@ -74,6 +74,7 @@ start-up the turtlebot by running:
 ```
 roslaunch turtlebot3_bringup turtlebot3_robot.launch
 ```
+If you get plenty of errors, the opencr might need to be updated: https://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/, make sure to select the NOETIC version.
 
 You can also start-up the camera by running
 ```
